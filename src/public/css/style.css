@@ -70,6 +70,20 @@ h2 {
     z-index: -1;
 }  
 
+.badge-date {
+    font-weight: 300;
+    opacity: 0.5;
+    font-size: 0.8rem !important;
+    color: #fff;
+    border-radius: 2px;
+    padding: 0 6px 0;
+    margin-right: 8px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 22px;
+    height: 22px;
+}
+
 .card { 
     border-radius: 15px;
     background-color: rgba(255, 0, 0, 0.3) !important;
@@ -115,6 +129,7 @@ input, textarea {
 
 .collapsible-body {
     display: block;
+    padding: 1rem;
     background-color: rgba(247, 166, 98, 0.3) !important;
 }
 

@@ -13,7 +13,8 @@ export default class App extends Component {
             touched: {
                 title: false,
                 description: false
-            }
+            },
+            created: new Date()
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -24,6 +25,8 @@ export default class App extends Component {
     printTasks() {
         return(
             this.state.tasks.map(task => {
+                let date = new Date(task.created)
+                let created = `${('0' + date.getDate()).slice(-2)}/${('0' + (date.getMonth() + 1)).slice(-2)}/${date.getFullYear()}`
                 return (
                     <div className="col s12 m4" key={task._id}>
                         <ul className="collapsible" >
@@ -36,6 +39,7 @@ export default class App extends Component {
                                         onClick={() => this.editTask(task._id)}>mode_edit</i>
                                 </div>
                                 <div className="collapsible-body ">
+                                    <span className="badge-date red darken-4 white-text">{created}</span>  
                                     <span>{task.description}</span>
                                 </div>
                             </li>
@@ -126,7 +130,6 @@ export default class App extends Component {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        debugger
                         M.toast({html: 'New task saved.'})
                         // Reset the state
                         this.resetState()
