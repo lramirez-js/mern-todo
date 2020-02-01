@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+
+html {
+    scroll-behavior: smooth
+}
+
+body, #app {
+    background-image: linear-gradient(to right top, #34234f, #7a3664, #ba5268, #e97e60, #ffb85b);
+    background-attachment: fixed;
+    height: 100vh;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 );
+}
+
+/* Wrapper */
+.hero-wrap {
+    width: 100%;
+    height: 100%;   
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: .97;
+}
+
+/*Neon*/
+h1, h2 {
+    margin-top: 5rem;
+    color: #fff;
+
+    font-family: 'Monoton', cursive;
+    text-align: center;
+    font-size: 5rem;
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+@-webkit-keyframes neon1 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+    }
+}
+
+.w50 {
+    width: 50%;
+}
+
+.particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}  
+
+.card { 
+    border-radius: 15px;
+    background-color: rgba(255, 0, 0, 0.3) !important;
+}
+
+.container-tasks {
+    margin-top: 5rem;
+}
+
+.card-task {
+    background-color: rgba(247, 166, 98, 0.3) !important;
+}
+
+.task-text {
+    font-size: 16px;
+    margin: 5px;
+}
+
+input, textarea {
+    color: #fff;
+}
+
+.errors {
+    color: #deda56;
+    font-size: 0.85rem;
+}
+
+.material-icons {
+    margin: 0 0 0 auto;
+    width: 0.5rem;
+    text-align: right;
+}
+
+.collapsible {
+    border-radius: 5px;
+    
+}
+
+.collapsible-header{
+    display: block;
+    background-color: rgba(255, 0, 0, 0.3) !important;    
+}
+
+.collapsible-body {
+    display: block;
+    background-color: rgba(247, 166, 98, 0.3) !important;
+}
+
+.collapsible, .collapsible-header, .collapsible-body {
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    color: #d3d3d3;
+
+}
+
+.collapsible-header i {
+    width: 0.5rem !important;
+}
